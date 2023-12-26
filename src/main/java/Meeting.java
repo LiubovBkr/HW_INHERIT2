@@ -24,6 +24,13 @@ public class Meeting extends Task {
 
     @Override
     public boolean matches(String query) {
-        return topic.contains(query) || project.contains(query);
+        if (topic.contains(query)){
+            return true;
+        }
+        if (project.contains(query)){
+            return true;
+        }
+
+        return false;
     }
 }
